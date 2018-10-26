@@ -1,0 +1,87 @@
+<table border="1" class="dataframe" id="demo">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Body</th>
+      <th>Radius (R⊕)</th>
+      <th>Volume (V⊕)</th>
+      <th>Mass (M⊕)</th>
+      <th>Density (g/cm3)</th>
+      <th>Gravity (⊕)</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sun</td>
+      <td>109.3000</td>
+      <td>1305700.000</td>
+      <td>333000.000</td>
+      <td>1.4080</td>
+      <td>27.940</td>
+      <td>star</td>
+    </tr>
+    <tr>
+      <td>Jupiter</td>
+      <td>10.9700</td>
+      <td>1321.000</td>
+      <td>317.830</td>
+      <td>1.3260</td>
+      <td>2.528</td>
+      <td>planet (gas giant); has rings</td>
+    </tr>
+    <tr>
+      <td>Saturn</td>
+      <td>9.1400</td>
+      <td>764.000</td>
+      <td>95.162</td>
+      <td>0.6870</td>
+      <td>1.065</td>
+      <td>planet (gas giant); has rings</td>
+    </tr>
+    <tr>
+      <td>Uranus</td>
+      <td>3.9810</td>
+      <td>63.100</td>
+      <td>14.536</td>
+      <td>1.2700</td>
+      <td>0.900</td>
+      <td>planet (ice giant); has rings</td>
+    </tr>
+    <tr>
+      <td>Neptune</td>
+      <td>3.8650</td>
+      <td>57.700</td>
+      <td>17.147</td>
+      <td>1.6380</td>
+      <td>1.137</td>
+      <td>planet (ice giant); has rings</td>
+    </tr>
+    <tr>
+      <td>Earth</td>
+      <td>1.0000</td>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>5.5140</td>
+      <td>1.000</td>
+      <td>planet (terrestrial)</td>
+    </tr>
+    <tr>
+      <td>Venus</td>
+      <td>0.9499</td>
+      <td>0.857</td>
+      <td>0.815</td>
+      <td>5.2430</td>
+      <td>0.905</td>
+      <td>planet (terrestrial)</td>
+    </tr>
+    <tr>
+      <td>Mars</td>
+      <td>0.5320</td>
+      <td>0.151</td>
+      <td>0.107</td>
+      <td>3.9335</td>
+      <td>0.380</td>
+      <td>planet (terrestrial)</td>
+    </tr>
+  </tbody>
+</table>

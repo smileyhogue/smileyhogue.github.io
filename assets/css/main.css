@@ -1,0 +1,103 @@
+body {
+  color: #63666A;
+  font-family: "Verdana", "Arial";
+}
+
+h1 {
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-size: 20pt;
+}
+
+h2 {
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-size: 16pt;
+}
+
+p {
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  font-size: 12pt;
+}
+
+header {
+  border-radius: 3px;
+  color: white;
+  background-color: #3377b3
+
+}
+
+footer {
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-family: "Verdana", "Arial";
+  font-size: 6pt;
+  border-radius: 3px;
+  color: white;
+  background-color: #3377b3
+}
+
+code {
+  font-family: "Menlo Regular", "Consolas", "Monaco", monospace;
+  color: #fff;
+  background: #555;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.1em 0.25em;
+}
+
+pre code {
+  background-color: #555;
+  display: block;
+  margin: .1em 5em .1em 2.5em;
+  line-height: 0.7em;
+}
+
+a {
+  color: #3377b3;
+  /*font-weight; bold;*/
+}
+
+a:hover {
+  color: #00E22D;
+}
+
+img {
+  max-width: 75%;
+  /*max-width: 750px;*/
+  height: auto;
+}
+
+table {
+  border-collapse:collapse
+}
+
+th, td {
+  padding: 0.0em 0.0em 0.0em 1em;
+  text-align: left;
+  border: 2px solid white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+/*alert boxes*/
+/*styled after bootstrap alerts: https://www.w3schools.com/bootstrap/bootstrap_alerts.asp*/
+.box {
+  border: 1px solid #000;
+  margin: 0 auto 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info {
+  color: #31708F;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1; 
+}
+
+.warning {
+  color: #8A6D3B;
+  background-color: #FCF8E3;
+  border-color: #FAEBCC; 
+}
