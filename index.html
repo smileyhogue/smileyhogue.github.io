@@ -30,6 +30,8 @@ gtag('config', 'UA-72240498-1');
 
 <link href="assets/css/main.css" rel="stylesheet">
 
+<link href="assets/css/code.css" rel="stylesheet">
+
 <body>
 
 <!-- Wrapper -->
@@ -126,31 +128,37 @@ gtag('config', 'UA-72240498-1');
 
 <p>You can add a sitemap to aid in searching (and perhaps eventually get sitelinks on the search result) from <a target="_blank" href="https://www.xml-sitemaps.com">xml-sitemaps.com</a>. This also gets uploaded to the root directory of your webiste.</p>
 
-<h2 id="meta-tag">meta tag</h2>
+<h2 id="meta-tags">Meta tags</h2>
 
 <p>To improve search results, you can update the meta tags. See more information about <a target="_blank" href="https://support.google.com/webmasters/answer/79812?hl=en">meta tags that Google understands</a>. Two examples include <code>"description"</code> and <code>"keywords"</code>:</p>
 
-<p><code>&lt;meta name="description" content="add a description of your site here"&gt;</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;add a description of your site here&quot;</span><span class="p">&gt;</span>
 
-<p><code>&lt;meta name="keywords" content="add, some, keywords, you, want, here"&gt;</code></p>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;add, some, keywords, you, want, here&quot;</span><span class="p">&gt;</span>
 
-<!-- <pre>
-
-<code>
-
-p { color: red; }
-
-body { background-color: #eee; }
-
-</code>
-
-</pre>
-
--->
+</code></pre></div>
 
 <h2 id="google-analytics">Google Analytics</h2>
 
 <p>To analyze traffice to your website, set up <a target="_blank" href="https://analytics.google.com/analytics/web/">Google Analytics</a> to get your unique tracking ID and then copy the required code in to your HTML pages.</p>
+
+<div class="codehilite"><pre><span></span><code>  <span class="c">&lt;!-- Global Site Tag (gtag.js) - Google Analytics --&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.googletagmanager.com/gtag/js?id=UA-&lt;YOUR ID&gt;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">||</span> <span class="p">[];</span>
+
+<span class="kd">function</span> <span class="nx">gtag</span><span class="p">(){</span><span class="nx">dataLayer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);}</span>
+
+<span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+
+<span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">,</span> <span class="s1">&#39;UA-&lt;YOUR ID&gt;&#39;</span><span class="p">);</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+</code></pre></div>
 
 <h1 id="4-auto-build-your-site">4. Auto Build Your Site</h1>
 
@@ -364,7 +372,7 @@ body { background-color: #eee; }
 
 <p>
 
-Updated <strong>2018-10-26</strong> <br>
+Updated <strong>2018-10-27</strong> <br>
 
 &copy; 2005<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> Matthew Kudija
 

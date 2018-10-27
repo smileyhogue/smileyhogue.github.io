@@ -65,24 +65,28 @@ The favicon is the small image displayed on the tab in your web browser. You can
 ## sitemap.xml
 You can add a sitemap to aid in searching (and perhaps eventually get sitelinks on the search result) from [xml-sitemaps.com](https://www.xml-sitemaps.com). This also gets uploaded to the root directory of your webiste.
 
-## meta tag
+## Meta tags
 To improve search results, you can update the meta tags. See more information about [meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en). Two examples include `"description"` and `"keywords"`:
 
-`<meta name="description" content="add a description of your site here">`
 
-`<meta name="keywords" content="add, some, keywords, you, want, here">`
-
-
-<!-- <pre>
-  <code>
-    p { color: red; }
-    body { background-color: #eee; }
-  </code>
-</pre>
- -->
+```html
+<meta name="description" content="add a description of your site here">
+<meta name="keywords" content="add, some, keywords, you, want, here">
+```
 
 ## Google Analytics
 To analyze traffice to your website, set up [Google Analytics](https://analytics.google.com/analytics/web/) to get your unique tracking ID and then copy the required code in to your HTML pages.
+
+```html
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-<YOUR ID>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-<YOUR ID>');
+  </script>
+```
 
 
 # 4. Auto Build Your Site

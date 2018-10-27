@@ -25,7 +25,8 @@ def markdown():
     mdString = ''.join(md)
     content = markdown2.markdown(mdString, 
                                 extras=['footnotes','smarty-pants','cuddled-lists','target-blank-links',
-                                        'tables','header-ids','break-on-newline', 'header-ids'])#,'fenced-code-blocks'])
+                                        'tables','header-ids','break-on-newline', 'header-ids',
+                                        'fenced-code-blocks'])
     doc = [content]
     # doc = head+content+foot
 
