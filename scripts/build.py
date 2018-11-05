@@ -53,7 +53,7 @@ def insert_html(htmlOriginal, htmlAdd, insertionPoint):
     import fileinput
 
     with open(htmlAdd) as f:
-        head = [x.strip('\n,') for x in f]
+        head = [x.strip('\n') for x in f]
     head = [x.strip() for x in head] 
     for line in fileinput.input(htmlOriginal, inplace=1):
         if line.startswith(insertionPoint):
@@ -90,42 +90,20 @@ def build():
     insert_html(htmlOriginal=fname, htmlAdd=htmlAdd, insertionPoint='<p>XXX-INSERT TABLE HERE-XXX</p>')
     # insert_html(htmlOriginal=fname, htmlAdd=htmlAdd, insertionPoint='    <!-- INSERT TABLE -->')
 
+    # add filter table
+    htmlAdd = 'html/tablefilter.html'
+    insert_html(htmlOriginal=fname, htmlAdd=htmlAdd, insertionPoint='<!-- ADD TABLEFILTER SCRIPT -->')
+
     # replace text
     with open(fname) as f:
-        head = [x.strip('\n,') for x in f]
-    head = [x.strip() for x in head]    
+        head = [x.strip('\n') for x in f]
     for line in range(len(head)):
-
-        # add date
         head[line] = head[line].replace('#DATE#',date)
-
-        # add tablefilter data
-        head[line] = head[line].replace('<!-- TF0 -->'," var filtersConfig = {")
-        head[line] = head[line].replace('<!-- TF1 -->',"  base_path: 'tablefilter/',")
-        head[line] = head[line].replace('<!-- TF2 -->',"  auto_filter: {    ")
-        head[line] = head[line].replace('<!-- TF3 -->',"                    delay: 110 //milliseconds")
-        head[line] = head[line].replace('<!-- TF4 -->',"              },")
-        head[line] = head[line].replace('<!-- TF5 -->',"              filters_row_index: 1,")
-        head[line] = head[line].replace('<!-- TF6 -->',"              state: true,")
-        head[line] = head[line].replace('<!-- TF7 -->',"              alternate_rows: true,")
-        head[line] = head[line].replace('<!-- TF8 -->',"              rows_counter: true,")
-        head[line] = head[line].replace('<!-- TF9 -->',"              btn_reset: true,")
-        head[line] = head[line].replace('<!-- TF10 -->',"              status_bar: true,")
-        head[line] = head[line].replace('<!-- TF11 -->',"              msg_filter: 'Filtering...'")
-        head[line] = head[line].replace('<!-- TF12 -->',"            };")
-        head[line] = head[line].replace('<!-- TF13 -->',"            var tf = new TableFilter('demo', filtersConfig);")
-        head[line] = head[line].replace('<!-- TF14 -->',"            tf.init();")
-        head[line] = head[line].replace('<!-- TF15 -->',"          </script>")
     with open(fname, mode='wt', encoding='utf-8') as myfile:
-        for lines in head:
-            myfile.write(''.join(lines))
-            myfile.write('\n') 
-
-    # strip extra lines
-    import fileinput
-    for line in fileinput.FileInput('../index.html',inplace=1):
-        if line.rstrip():
-            print(line)
+        for line in head:
+            if len(line)>0:
+                myfile.write(''.join(line))
+                myfile.write('\n') 
 
 
 def main():
